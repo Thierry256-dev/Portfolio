@@ -1,6 +1,12 @@
+@import "tailwindcss";
 header {
   height: 100vh;
-  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.733),
+      rgba(0, 0, 0, 0.911)
+    ),
+    url("assets/hd-bg.webp");
   font-family: Arial, Helvetica, sans-serif;
   background-position: center;
   background-repeat: no-repeat;

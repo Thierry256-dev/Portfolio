@@ -1,3 +1,5 @@
+import profile from "../assets/profile.webp";
+
 export default function Home() {
   return (
     <>
@@ -24,7 +26,7 @@ export default function Home() {
           </a>
         </nav>
       </div>
-      <div className="flex flex-row items-center gap-5">
+      <div className="flex flex-row items-center gap-5 w-full">
         <div>
           <h1 className="font-bold text-[2.5rem]">Hi, I'm Thierry Munderi</h1>
           <h2 className="font-semibold text-[1.2rem] text-blue-500">
@@ -40,6 +42,7 @@ export default function Home() {
             Contact Me
           </button>
         </div>
+        <img src={profile} className="rounded-full w-1/3" alt="profile-image" />
       </div>
     </>
   );
