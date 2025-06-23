@@ -9,24 +9,24 @@ import Footer from "./Componets/Footer";
 function App() {
   return (
     <>
-      <div id="home">
+      <header id="home">
         <Home />
-      </div>
-      <div id="about">
+      </header>
+      <section id="about">
         <About />
-      </div>
-      <div id="projects">
+      </section>
+      <section id="projects">
         <Projects />
-      </div>
-      <div id="educaton">
+      </section>
+      <section id="educaton">
         <Education />
-      </div>
-      <div id="testimonials">
+      </section>
+      <section id="testimonials">
         <Testimonials />
-      </div>
-      <div id="footer">
+      </section>
+      <footer id="footer">
         <Footer />
-      </div>
+      </footer>
     </>
   );
 }
