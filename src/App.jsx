@@ -9,7 +9,7 @@ import Footer from "./Componets/Footer";
 function App() {
   return (
     <>
-      <header id="home">
+      <header id="home" className="text-stone-400 p-10">
         <Home />
       </header>
       <section id="about">
