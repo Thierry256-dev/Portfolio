@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Home from "./Componets/Home";
 import About from "./Componets/About";
@@ -8,7 +7,28 @@ import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div id="home">
+        <Home />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="educaton">
+        <Education />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
