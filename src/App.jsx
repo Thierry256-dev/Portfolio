@@ -9,10 +9,10 @@ import Footer from "./Componets/Footer";
 function App() {
   return (
     <>
-      <header id="home" className="text-stone-400 p-10">
+      <header id="home" className="flex text-stone-400 px-8 py-2 items-center">
         <Home />
       </header>
-      <section id="about">
+      <section id="about" className="h-screen bg-sky-100 p-8">
         <About />
       </section>
       <section id="projects">
