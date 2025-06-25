@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Componets/Home";
 import About from "./Componets/About";
-import Projects from "./Componets/Projects";
+import "./Componets/Projects";
 import Education from "./Componets/Education";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
@@ -15,9 +15,7 @@ function App() {
       <section id="about" className="h-auto bg-sky-50 p-8">
         <About />
       </section>
-      <section id="projects">
-        <Projects />
-      </section>
+      <section id="projects"></section>
       <section id="educaton">
         <Education />
       </section>
