@@ -17,10 +17,10 @@ function App() {
       </section>
       <section
         id="projects"
-        className="relative flex gap-10 flex-col items-center p-6 h-auto text-stone-50 font-bold"
+        className="relative flex gap-10 flex-col items-center p-6 h-auto font-bold"
       >
         <div className="absolute h-full w-screen z-1 bg-slate-950 blur-[5px]"></div>
-        <div className="flex gap-10 px-8 py-5 z-2 bg-blue-950/50 mt-[10px] rounded-full">
+        <div className="flex gap-10 px-8 py-5 z-2 bg-blue-950/50 mt-[10px] rounded-full text-stone-300">
           <NavLink to={`/`} className="hover:decoration-amber-100">
             All
           </NavLink>
