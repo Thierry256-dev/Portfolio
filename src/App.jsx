@@ -12,7 +12,7 @@ function App() {
       <header id="home" className="flex text-stone-400 px-8 py-2 items-center">
         <Home />
       </header>
-      <section id="about" className="h-screen bg-sky-100 p-8">
+      <section id="about" className="h-auto bg-sky-50 p-8">
         <About />
       </section>
       <section id="projects">

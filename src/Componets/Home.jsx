@@ -3,7 +3,7 @@ import profile from "../assets/profile.webp";
 export default function Home() {
   return (
     <>
-      <div className="fixed top-0 left-0 w-screen z-100 flex justify-around items-center p-[20px] bg-transparent ">
+      <div className="fixed top-0 left-0 w-screen z-100 flex justify-around items-center p-[20px] bg-slate-950/75 ">
         <h1 className="">Thierry_Munderi</h1>
         <nav className="flex gap-4">
           <a href="#home" className="hover:text-amber-500">
