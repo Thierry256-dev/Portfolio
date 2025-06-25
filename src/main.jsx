@@ -3,8 +3,9 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import Portfolio from "./Componets/Portfolio.jsx";
-import Project1 from "./Componets/Projects/All.jsx";
+import All from "./Componets/Projects/All.jsx";
+import WebApps from "./Componets/Projects/WebApps.jsx";
+import Designs from "./Componets/Projects/Designs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Project1 />,
+        element: <All />,
+      },
+      {
+        path: `webapps`,
+        element: <WebApps />,
+      },
+      {
+        path: `designs`,
+        element: <Designs />,
       },
     ],
   },

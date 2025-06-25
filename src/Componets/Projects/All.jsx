@@ -1,4 +1,4 @@
-export default function Project1() {
+export default function All() {
   return (
     <>
       <div>page1</div>
