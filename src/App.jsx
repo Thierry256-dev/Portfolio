@@ -1,10 +1,10 @@
 import "./App.css";
 import Home from "./Componets/Home";
 import About from "./Componets/About";
-import "./Componets/Projects";
 import Education from "./Componets/Education";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -15,7 +15,9 @@ function App() {
       <section id="about" className="h-auto bg-sky-50 p-8">
         <About />
       </section>
-      <section id="projects"></section>
+      <section id="projects">
+        <Outlet />
+      </section>
       <section id="educaton">
         <Education />
       </section>
