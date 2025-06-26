@@ -1,4 +1,6 @@
-export default function ProjectCard({ name, link, description }) {
+import { FaCamera, FaCircle, FaGithub } from "react-icons/fa";
+
+export default function ProjectCard({ name, link, description, tech }) {
   return (
     <>
       <div className="flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[300px] border-4 border-orange-500/75">
@@ -10,11 +12,24 @@ export default function ProjectCard({ name, link, description }) {
           </p>
           <p>
             <span>Description: </span>
-            <span className="text-stone-300 font-normal">{description}</span>
+            <span className="text-stone-300 font-normal text-sm">
+              {description}
+            </span>
           </p>
+          <p>
+            <span>TechStack: </span>
+            <span>{tech}</span>
+          </p>
+          <a href="" className="flex items-center gap-1 text-blue-600 text-sm">
+            <FaGithub /> Github Repository/ SourceCode
+          </a>
           <div className="flex justify-between mt-[10px]">
-            <span>Preview</span>
-            <a href={link} className="text-green-500">
+            <span className="flex items-center cursor-pointer">
+              <FaCamera className="inline mr-[5px]" />
+              Preview
+            </span>
+            <a href={link} className="text-green-500 flex items-center">
+              <FaCircle className="inline w-[10px] mr-[4px]" />
               Live
             </a>
           </div>
