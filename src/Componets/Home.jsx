@@ -1,4 +1,4 @@
-import profile from "../assets/profile.webp";
+import profile from "../assets/profile1.webp";
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
             Contact Me
           </button>
         </div>
-        <img src={profile} className="rounded-full w-1/3" alt="profile-image" />
+        <img src={profile} className="w-1/3" alt="profile-image" />
       </div>
     </>
   );

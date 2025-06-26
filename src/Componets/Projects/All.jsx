@@ -10,6 +10,9 @@ export default function All() {
             name={obj.name}
             description={obj.description}
             link={obj.link}
+            github={obj.github}
+            tech={obj.tech}
+            cover={obj.coverImage}
           />
         ))}
       </div>

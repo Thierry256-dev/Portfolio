@@ -1,26 +1,36 @@
 import { FaCamera, FaCircle, FaGithub } from "react-icons/fa";
 
-export default function ProjectCard({ name, link, description, tech }) {
+export default function ProjectCard({
+  name,
+  link,
+  description,
+  github,
+  tech,
+  cover,
+}) {
   return (
     <>
-      <div className="flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[300px] border-4 border-orange-500/75">
-        <div className="h-[200px] overflow-hidden rounded-lg">Image</div>
-        <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg">
+      <div className="flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px] border-4 border-orange-600/75">
+        <div className="h-[200px] overflow-hidden rounded-lg">{cover}</div>
+        <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg g-4">
           <p>
             <span>Name: </span>
             <span className="text-amber-400 font-normal">{name}</span>
           </p>
           <p>
-            <span>Description: </span>
-            <span className="text-stone-300 font-normal text-sm">
+            <span className="block">Description:</span>
+            <span className="text-stone-400 font-normal text-sm pl-4">
               {description}
             </span>
           </p>
           <p>
             <span>TechStack: </span>
-            <span>{tech}</span>
+            <span className="font-normal text-stone-600 text-sm">{tech}</span>
           </p>
-          <a href="" className="flex items-center gap-1 text-blue-600 text-sm">
+          <a
+            href={github}
+            className="flex items-center gap-1 text-blue-600 text-sm"
+          >
             <FaGithub /> Github Repository/ SourceCode
           </a>
           <div className="flex justify-between mt-[10px]">
