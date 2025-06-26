@@ -31,7 +31,7 @@ export default function ProjectCard({
             href={github}
             className="flex items-center gap-1 text-blue-600 text-sm"
           >
-            <FaGithub /> Github Repository/ SourceCode
+            <FaGithub /> Github Repository
           </a>
           <div className="flex justify-between mt-[10px]">
             <span className="flex items-center cursor-pointer">
