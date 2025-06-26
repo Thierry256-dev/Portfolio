@@ -1,10 +1,17 @@
 import ProjectCard from "./ProjectCard";
+import { data } from "./projectsData";
 
 export default function All() {
   return (
     <>
-      <div>
-        <ProjectCard />
+      <div className="grid grid-cols-2 gap-6">
+        {data.map((obj) => (
+          <ProjectCard
+            name={obj.name}
+            description={obj.description}
+            link={obj.link}
+          />
+        ))}
       </div>
     </>
   );
