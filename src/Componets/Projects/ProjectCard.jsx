@@ -11,7 +11,7 @@ export default function ProjectCard({
   return (
     <>
       <div className="flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px] border-4 border-orange-600/75">
-        <div className="h-[200px] overflow-hidden rounded-lg">{cover}</div>
+        <img src={cover} className="h-[200px] overflow-hidden rounded-lg" />
         <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg g-4">
           <p>
             <span>Name: </span>

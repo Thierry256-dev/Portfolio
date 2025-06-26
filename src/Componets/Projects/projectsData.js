@@ -7,7 +7,7 @@ export const data = [
     github: "https://github.com/Thierry256-dev/SmartLedger.git",
     description:
       "SmartLedger is a React demo web app that helps a user to track his/her finances. It graphically displays income vs expenditure and categorises the expenditure. The app completely depends on localStorage to store and retrive data.",
-    coverImage: "../../assets/opt/s.webp",
+    coverImage: ".//opt/s.webp",
     tech: "React | Tailwindcss",
     screenshots: [],
   },
@@ -19,7 +19,7 @@ export const data = [
     github: "https://github.com/Thierry256-dev/BuyMe.git",
     description:
       "BuyMe is an online shopping demo web app. The app displays product categories and uses Fuse.js to enable a user easily find their desired items. The cart is stored and retrieved from LocalStorage. Checkout and Payment pages are included.",
-    coverImage: "../../assets/opt/b.webp",
+    coverImage: "/opt/b.webp",
     tech: "HTML | CSS3 | JavaScript",
     screenshots: [],
   },
@@ -31,7 +31,7 @@ export const data = [
     github: "",
     description:
       "Brew Haven is a one page CoffeeShop website with a modern web design.",
-    coverImage: "../../assets/opt/coffee1.webp",
+    coverImage: "/opt/coffee1.webp",
     tech: "HTML | CSS3 | JavaScript",
     screenshots: [],
   },
@@ -43,7 +43,7 @@ export const data = [
     github: "https://github.com/Thierry256-dev/myprojects.git",
     description:
       "Merryland Hybrid is a multi-page school website whose design is inspired from the Merryland Schools,Entebbe.",
-    coverImage: "../../assets/opt/m.webp",
+    coverImage: "/opt/m.webp",
     tech: "HTML | CSS3 | JavaScript",
     screenshots: [],
   },
