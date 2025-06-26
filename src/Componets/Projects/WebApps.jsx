@@ -1,7 +1,24 @@
+import { data } from "./projectsData";
+import ProjectCard from "./ProjectCard";
+
 export default function WebApps() {
   return (
     <>
-      <div>webapps</div>
+      <div className="grid grid-cols-2 gap-6">
+        {data.map((obj) => {
+          if (obj.category === "webapps")
+            return (
+              <ProjectCard
+                name={obj.name}
+                description={obj.description}
+                link={obj.link}
+                github={obj.github}
+                tech={obj.tech}
+                cover={obj.coverImage}
+              />
+            );
+        })}
+      </div>
     </>
   );
 }

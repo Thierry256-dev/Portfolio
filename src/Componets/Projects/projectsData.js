@@ -26,7 +26,7 @@ export const data = [
   {
     id: "2",
     name: "Brew Haven",
-    category: "webapps",
+    category: "designs",
     link: "https://thierry-brew-haven.netlify.app",
     github: "",
     description:
@@ -38,7 +38,7 @@ export const data = [
   {
     id: "1",
     name: "Merryland Hybrid",
-    category: "design",
+    category: "designs",
     link: "https://thierry256-dev.github.io/myprojects/",
     github: "https://github.com/Thierry256-dev/myprojects.git",
     description:
