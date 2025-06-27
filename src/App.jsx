@@ -5,7 +5,7 @@ import Education from "./Componets/Education";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
 import { Outlet, NavLink } from "react-router-dom";
-import { FaFolderOpen } from "react-icons/fa";
+import { FaFolderOpen, FaGraduationCap } from "react-icons/fa";
 
 function App() {
   return (
@@ -39,8 +39,12 @@ function App() {
       </section>
       <section
         id="educaton"
-        className="p-8 bg-gray-950 h-auto flex justify-center"
+        className="p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
+        <h1 className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-4xl">
+          <FaGraduationCap className="inline" />
+          Education
+        </h1>
         <Education />
       </section>
       <section id="testimonials">
