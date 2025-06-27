@@ -1,0 +1,32 @@
+export const educationData = [
+  {
+    id: "3",
+    achievement: "",
+    badge: "/edu/kyu.png",
+    instituton: "",
+    duration: "",
+    studyCore: "",
+    comment: "",
+    emphasis: [],
+  },
+  {
+    id: "2",
+    achievement: "",
+    badge: "/edu/merro.jpg",
+    instituton: "",
+    duration: "",
+    studyCore: "",
+    comment: "",
+    emphasis: [],
+  },
+  {
+    id: "1",
+    achievement: "",
+    badge: "/edu/merro.jpg",
+    instituton: "",
+    duration: "",
+    studyCore: "",
+    comment: "",
+    emphasis: [],
+  },
+];

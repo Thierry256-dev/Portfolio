@@ -37,7 +37,10 @@ function App() {
           <Outlet />
         </div>
       </section>
-      <section id="educaton">
+      <section
+        id="educaton"
+        className="p-8 bg-gray-950 h-auto flex justify-center"
+      >
         <Education />
       </section>
       <section id="testimonials">
