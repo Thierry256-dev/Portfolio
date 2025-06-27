@@ -1,4 +1,4 @@
-import { FaCamera, FaCircle, FaGithub, FaTimes } from "react-icons/fa";
+import { FaCamera, FaCircle, FaGithub, FaTimes, FaTools } from "react-icons/fa";
 import { useState } from "react";
 
 export default function ProjectCard({
@@ -36,7 +36,10 @@ export default function ProjectCard({
             </span>
           </p>
           <p>
-            <span>TechStack: </span>
+            <span>
+              <FaTools className="inline" />
+              TechStack:{" "}
+            </span>
             <span className="font-normal text-stone-600 text-sm">{tech}</span>
           </p>
           <a
@@ -61,7 +64,7 @@ export default function ProjectCard({
           <div
             className={
               isActive
-                ? "flex flex-col  items-center absolute rounded-lg top-0 left-0 w-screen h-[80%] overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
+                ? "flex flex-col  items-center absolute rounded-lg top-0 left-2 w-[100%] h-[100%] overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
                 : "hidden"
             }
           >

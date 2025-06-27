@@ -58,7 +58,6 @@ export const data = [
       "/opt/coffee2.webp",
       "/opt/coffee3.webp",
       "/opt/coffee4.webp",
-      "/opt/coffee5.webp",
       "/opt/coffee6.webp",
       "/opt/coffee1-1.webp",
       "/opt/coffee2-2.webp",

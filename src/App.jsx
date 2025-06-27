@@ -5,6 +5,7 @@ import Education from "./Componets/Education";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
 import { Outlet, NavLink } from "react-router-dom";
+import { FaFolderOpen } from "react-icons/fa";
 
 function App() {
   return (
@@ -17,11 +18,15 @@ function App() {
       </section>
       <section
         id="projects"
-        className="relative flex gap-10 flex-col items-center h-auto font-bold"
+        className="relative flex gap-5 pb-8 flex-col items-center h-auto font-bold"
       >
-        <div className="absolute h-full w-screen z-1 bg-[url('./assets/Bg2.jpg')] bg-no-repeat bg-cover bg-center blur-[5px]"></div>
-        <div className="absolute h-full w-screen inset-0 bg-black/70 z-2"></div>
-        <div className="flex gap-10 px-8 py-5 z-3 bg-blue-950/50 mt-[10px] rounded-full text-stone-300">
+        <h1 className="flex items-center z-3 text-sky-200/75 pt-5 text-4xl">
+          <FaFolderOpen className="inline" />
+          Projects
+        </h1>
+        <div className="absolute h-full inset-0 z-1 bg-[url('./assets/Bg2.jpg')] bg-no-repeat bg-cover bg-center blur-[5px]"></div>
+        <div className="absolute h-full  inset-0 bg-black/70 z-2"></div>
+        <div className="flex sticky top-0 gap-10 px-8 py-4 z-3 bg-slate-950/75 rounded-full text-stone-300">
           <NavLink to={`/`} className="hover:decoration-amber-100">
             All
           </NavLink>
