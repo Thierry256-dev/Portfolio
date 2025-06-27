@@ -42,7 +42,11 @@ export default function Home() {
             Contact Me
           </button>
         </div>
-        <img src={profile} className="w-1/3" alt="profile-image" />
+        <img
+          src={profile}
+          className="w-1/3 rounded-full bg-slate-950/80 border-5 border-sky-200/80"
+          alt="profile-image"
+        />
       </div>
     </>
   );
