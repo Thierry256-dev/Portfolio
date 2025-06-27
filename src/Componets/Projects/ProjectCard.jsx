@@ -1,4 +1,5 @@
-import { FaCamera, FaCircle, FaGithub } from "react-icons/fa";
+import { FaCamera, FaCircle, FaGithub, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 export default function ProjectCard({
   name,
@@ -7,10 +8,21 @@ export default function ProjectCard({
   github,
   tech,
   cover,
+  screenshots,
 }) {
+  const [isActive, setIsActive] = useState(false);
+
+  function activate() {
+    setIsActive(true);
+  }
+
+  function deactivate() {
+    setIsActive(false);
+  }
+
   return (
     <>
-      <div className="flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px] border-4 border-orange-600/75">
+      <div className=" flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px] border-4 border-orange-600/75">
         <img src={cover} className="h-[250px] overflow-hidden rounded-lg" />
         <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg g-4">
           <p>
@@ -34,14 +46,35 @@ export default function ProjectCard({
             <FaGithub /> Github Repository
           </a>
           <div className="flex justify-between mt-[10px]">
-            <span className="flex items-center cursor-pointer">
+            <span
+              className="flex items-center cursor-pointer"
+              onClick={activate}
+            >
               <FaCamera className="inline mr-[5px]" />
               Preview
             </span>
             <a href={link} className="text-green-500 flex items-center">
               <FaCircle className="inline w-[10px] mr-[4px]" />
-              Live
+              Live View
             </a>
+          </div>
+          <div
+            className={
+              isActive
+                ? "flex flex-col  items-center absolute rounded-lg top-0 left-0 w-screen h-[80%] overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
+                : "hidden"
+            }
+          >
+            <div className="sticky top-0 flex justify-between p-4 items-center w-[100%] px-4 bg-gray-950">
+              Screenshot
+              <FaTimes
+                className="text-red-500 cursor-pointer"
+                onClick={deactivate}
+              />
+            </div>
+            {screenshots.map((shot) => (
+              <img key={shot} src={shot} />
+            ))}
           </div>
         </div>
       </div>

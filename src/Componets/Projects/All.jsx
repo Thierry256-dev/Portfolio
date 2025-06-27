@@ -13,6 +13,8 @@ export default function All() {
             github={obj.github}
             tech={obj.tech}
             cover={obj.coverImage}
+            screenshots={obj.screenshots}
+            key={obj.id}
           />
         ))}
       </div>

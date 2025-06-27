@@ -15,6 +15,8 @@ export default function WebApps() {
                 github={obj.github}
                 tech={obj.tech}
                 cover={obj.coverImage}
+                screenshots={obj.screenshots}
+                key={obj.id}
               />
             );
         })}
