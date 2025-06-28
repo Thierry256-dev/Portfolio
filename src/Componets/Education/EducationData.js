@@ -40,3 +40,30 @@ export const educationData = [
     emphasis: ["Sciences", "Arts", "VocationalStudies in Foods and Nutrition"],
   },
 ];
+
+export const techStack = [
+  {
+    id: "1",
+    language: "HTML",
+    progress: "100",
+    icon: "",
+  },
+  {
+    id: "2",
+    language: "CSS",
+    progress: "90",
+    icon: "",
+  },
+  {
+    id: "3",
+    language: "JavaScript",
+    progress: "80",
+    icon: "",
+  },
+  {
+    id: "4",
+    language: "ReactJs",
+    progress: "65",
+    icon: "",
+  },
+];
