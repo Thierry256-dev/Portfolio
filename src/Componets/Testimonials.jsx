@@ -18,8 +18,8 @@ export default function Testimonials() {
         <div
           className={
             isActive
-              ? "grid grid-cols-2 gap-4 blur-[8px]"
-              : "grid grid-cols-2 gap-4"
+              ? "grid grid-cols-1 gap-4 blur-[8px]"
+              : "grid grid-cols-1 gap-4"
           }
         >
           <TestimonialCard />
