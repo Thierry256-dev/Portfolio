@@ -38,7 +38,7 @@ function App() {
         </div>
       </section>
       <section
-        id="educaton"
+        id="education"
         className="p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
         <h1 className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-4xl">
