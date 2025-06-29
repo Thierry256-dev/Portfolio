@@ -64,7 +64,7 @@ export default function ProjectCard({
           <div
             className={
               isActive
-                ? "flex flex-col  items-center absolute rounded-lg top-0 left-2 w-[100%] h-[100%] overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
+                ? "flex flex-col  items-center absolute rounded-lg top-0 left-0 w-[100%] h-[100%] px-2 overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
                 : "hidden"
             }
           >

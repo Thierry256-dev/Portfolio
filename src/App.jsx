@@ -6,7 +6,12 @@ import TechStack from "./Componets/TechStack";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
 import { Outlet, NavLink } from "react-router-dom";
-import { FaFolderOpen, FaGraduationCap, FaTools } from "react-icons/fa";
+import {
+  FaFolderOpen,
+  FaGraduationCap,
+  FaTools,
+  FaUserCircle,
+} from "react-icons/fa";
 
 function App() {
   return (
@@ -14,14 +19,21 @@ function App() {
       <header id="home" className="flex text-stone-400 px-8 py-2 items-center">
         <Home />
       </header>
-      <section id="about" className="h-auto bg-gray-950 p-8">
+      <section
+        id="about"
+        className="flex items-center flex-col gap-4 h-auto bg-gray-950 p-8"
+      >
+        <h1 className="flex items-center text-3xl font-bold text-sky-200/75 ">
+          <FaUserCircle className="inline" />
+          About Me
+        </h1>
         <About />
       </section>
       <section
         id="projects"
         className="relative flex gap-5 pb-8 flex-col items-center h-auto font-bold"
       >
-        <h1 className="flex items-center z-3 text-sky-200/75 pt-5 text-4xl">
+        <h1 className="flex items-center z-3 text-sky-200/75 pt-5 text-3xl">
           <FaFolderOpen className="inline" />
           Projects
         </h1>
@@ -42,7 +54,7 @@ function App() {
         id="education"
         className="p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
-        <h1 className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-4xl">
+        <h1 className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-3xl">
           <FaGraduationCap className="inline" />
           Education
         </h1>
