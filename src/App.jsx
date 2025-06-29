@@ -16,7 +16,10 @@ import {
 function App() {
   return (
     <>
-      <header id="home" className="flex text-stone-400 px-8 py-2 items-center">
+      <header
+        id="home"
+        className="relative flex text-stone-400 px-8 py-2 items-center"
+      >
         <Home />
       </header>
       <section
