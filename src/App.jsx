@@ -58,7 +58,15 @@ function App() {
         </h1>
         <TechStack />
       </section>
-      <section id="testimonials">
+      <section
+        id="testimonials"
+        className="relative bg-slate-800/65 p-8 flex flex-col items-center"
+      >
+        <h1 className="flex items-center z-3 text-sky-200/85 pb-4 font-bold text-3xl">
+          Testimonials
+        </h1>
+        <div className="absolute h-full inset-0 z-1 bg-[url('./assets/keyboard.jpg')] bg-no-repeat bg-cover bg-center blur-[3px]" />
+        <div className="absolute inset-0 h-full z-2 bg-black/80" />
         <Testimonials />
       </section>
       <footer id="footer">
