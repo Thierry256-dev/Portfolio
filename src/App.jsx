@@ -2,10 +2,11 @@ import "./App.css";
 import Home from "./Componets/Home";
 import About from "./Componets/About";
 import Education from "./Componets/Education";
+import TechStack from "./Componets/TechStack";
 import Testimonials from "./Componets/Testimonials";
 import Footer from "./Componets/Footer";
 import { Outlet, NavLink } from "react-router-dom";
-import { FaFolderOpen, FaGraduationCap } from "react-icons/fa";
+import { FaFolderOpen, FaGraduationCap, FaTools } from "react-icons/fa";
 
 function App() {
   return (
@@ -46,6 +47,16 @@ function App() {
           Education
         </h1>
         <Education />
+      </section>
+      <section
+        id="techStack"
+        className="flex flex-col relative px-8 py-10 items-center"
+      >
+        <h1 className="flex items-center text-sky-200/75 pb-4 font-bold text-3xl">
+          <FaTools className="inline" />
+          Frontend Stack
+        </h1>
+        <TechStack />
       </section>
       <section id="testimonials">
         <Testimonials />
