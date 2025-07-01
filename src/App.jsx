@@ -25,6 +25,9 @@ function App() {
   const projectNavRef = useRef(null);
   const isProjectNavInView = useInView(projectNavRef, { once: true });
 
+  const eduRef = useRef(null);
+  const isEduInView = useInView(eduRef, { once: true });
+
   return (
     <>
       <header
@@ -57,6 +60,7 @@ function App() {
           ref={projectRef}
           initial={{ opacity: 0 }}
           animate={isProjectInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="flex items-center z-3 text-sky-200/75 pt-5 text-3xl"
         >
           <FaFolderOpen className="inline" />
@@ -68,6 +72,7 @@ function App() {
           ref={projectNavRef}
           initial={{ opacity: 0, y: 200 }}
           animate={isProjectNavInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className="flex sticky top-0 gap-10 px-8 py-4 z-3 bg-slate-950/75 rounded-full text-stone-300"
         >
           <NavLink
@@ -101,9 +106,15 @@ function App() {
       </section>
       <section
         id="education"
-        className="p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
+        className="pt-8 pl-8 pr-3 pb-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
-        <h1 className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-3xl">
+        <h1
+          ref={eduRef}
+          initial={{ opacity: 0, x: -200 }}
+          animate={isEduInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex items-center z-3 text-sky-200/75 pb-4 font-bold text-3xl"
+        >
           <FaGraduationCap className="inline" />
           Education
         </h1>

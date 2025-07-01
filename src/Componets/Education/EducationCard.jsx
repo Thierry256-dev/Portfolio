@@ -1,3 +1,6 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function EducationCard({
   achievement,
   institution,
@@ -7,13 +10,45 @@ export default function EducationCard({
   studyCore,
   emphasis,
 }) {
+  const cardRef = useRef(null);
+  const isEduCardInView = useInView(cardRef, { once: true });
+
+  const badgeRef = useRef(null);
+  const isBadgeInView = useInView(badgeRef, { once: true });
+
   return (
     <>
-      <div className="flex items-start gap-4 font-bold text-md text-white/75 border-4 border-white/35 rounded-xl">
-        <img
-          src={badge}
-          className="w-15 h-15 bg-black rounded-full border-4 border-white/50 shadow absolute left-0 translate-y-[-15%] translate-x-[-50%] mt-1"
-        />
+      <motion.img
+        ref={badgeRef}
+        initial={{ opacity: 0.5 }}
+        animate={isBadgeInView ? { opacity: 1 } : {}}
+        transition={{
+          duration: 1,
+          ease: "easeIn",
+        }}
+        src={badge}
+        className="w-15 h-15 bg-black rounded-full border-4 border-white/50 shadow absolute left-0 translate-y-[-15%] translate-x-[-50%] mt-1"
+      />
+      <motion.div
+        ref={cardRef}
+        initial={{
+          opacity: 0,
+          y: 200,
+        }}
+        animate={
+          isEduCardInView
+            ? {
+                opacity: 1,
+                y: 0,
+              }
+            : {}
+        }
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="flex items-start gap-4 font-bold text-md text-white/75 border-4 border-white/35 rounded-xl"
+      >
         <div className="bg-black/60 p-4 rounded-xl w-full gap-5">
           <h3 className="text-xl text-sky-500/85">{achievement}</h3>
           <ul className="ml-4 bg-black rounded-lg p-4">
@@ -39,7 +74,7 @@ export default function EducationCard({
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
