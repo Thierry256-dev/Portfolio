@@ -1,11 +1,12 @@
 import profile from "../assets/profile1.webp";
-import { motion, MotionConfig } from "framer-motion";
+import { motion, MotionConfig, AnimatePresence } from "framer-motion";
 import {
-  FaHome,
+  FaBars,
   FaTimes,
   FaLinkedin,
   FaInstagram,
-  FaTiktok,
+  FaGithub,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -22,63 +23,81 @@ export default function Home() {
   return (
     <>
       <div className="fixed top-0 left-0 w-screen z-100 flex justify-between items-center p-[20px] bg-slate-950/75 ">
-        <h1>Thierry_Munderi</h1>
-        <nav
-          className={
-            isVisible
-              ? "absolute top-[60px] right-0 bg-slate-950/75 flex flex-col rounded-md p-4 items-center gap-4"
-              : "hidden md:flex gap-4"
-          }
-        >
-          <a href="#home" onClick={deactivate} className="hover:text-amber-500">
-            Home
-          </a>
-          <a
-            href="#about"
-            onClick={deactivate}
-            className="hover:text-amber-500"
+        <h1 className="font-bold text-blue-500 text-[1.2rem]">Portfolio</h1>
+        <AnimatePresence>
+          <motion.nav
+            className={
+              isVisible
+                ? "absolute top-[60px] right-0 bg-slate-950/75 flex flex-col rounded-md p-4 items-center gap-4"
+                : "hidden md:flex gap-4"
+            }
+            initial={{
+              scale: 1,
+              opacity: 1,
+            }}
+            exit={{
+              scale: 0,
+              opacity: 0,
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+            }}
           >
-            About
-          </a>
-          <a
-            href="#projects"
-            onClick={deactivate}
-            className="hover:text-amber-500"
-          >
-            Projects
-          </a>
-          <a
-            href="#education"
-            onClick={deactivate}
-            className="hover:text-amber-500"
-          >
-            Education
-          </a>
-          <a
-            href="#testimonials"
-            onClick={deactivate}
-            className="hover:text-amber-500"
-          >
-            Testimonials
-          </a>
-          <a
-            href="#footer"
-            onClick={deactivate}
-            className="hover:text-amber-500"
-          >
-            Contacts
-          </a>
-        </nav>
-        <FaHome
+            <a
+              href="#home"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              About
+            </a>
+            <a
+              href="#projects"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              Projects
+            </a>
+            <a
+              href="#education"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              Education
+            </a>
+            <a
+              href="#testimonials"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              Testimonials
+            </a>
+            <a
+              href="#footer"
+              onClick={deactivate}
+              className="hover:text-amber-500"
+            >
+              Contacts
+            </a>
+          </motion.nav>
+        </AnimatePresence>
+        <FaBars
           onClick={activate}
           className={
-            isVisible ? "hidden" : "flex md:hidden h-7 w-7 cursor-pointer"
+            isVisible ? "hidden" : "flex md:hidden h-6 w-6 cursor-pointer"
           }
         />
         <FaTimes
           onClick={deactivate}
           className={
-            isVisible ? "flex md:hidden cursor-pointer h-7 w-7" : "hidden"
+            isVisible ? "flex md:hidden cursor-pointer h-6 w-6" : "hidden"
           }
         />
       </div>
@@ -145,7 +164,7 @@ export default function Home() {
                 }}
                 className="bg-purple-950 hover:bg-blue-700 px-6 py-2 rounded-lg transition text-white font-bold cursor-pointer"
               >
-                Let's Chat
+                Let's Chat <FaWhatsapp className="inline" />
               </motion.button>
             </a>
             <motion.div
@@ -166,7 +185,7 @@ export default function Home() {
                 <FaInstagram className="w-7 h-7" />
               </a>
               <a href="">
-                <FaTiktok className="w-7 h-7" />
+                <FaGithub className="w-7 h-7" />
               </a>
             </motion.div>
           </MotionConfig>

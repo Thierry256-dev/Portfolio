@@ -12,8 +12,13 @@ import {
   FaTools,
   FaUserCircle,
 } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 function App() {
+  const aboutRef = useRef(null);
+  const isAboutInView = useInView(aboutRef, { once: true });
+
   return (
     <>
       <header
@@ -26,10 +31,16 @@ function App() {
         id="about"
         className="flex items-center flex-col gap-4 h-auto bg-gray-950 p-8"
       >
-        <h1 className="flex items-center text-3xl font-bold text-sky-200/75 ">
+        <motion.h1
+          ref={aboutRef}
+          initial={{ opacity: 0 }}
+          animate={isAboutInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex items-center text-3xl font-bold text-sky-200/75 "
+        >
           <FaUserCircle className="inline" />
           About Me
-        </h1>
+        </motion.h1>
         <About />
       </section>
       <section
@@ -43,11 +54,30 @@ function App() {
         <div className="absolute h-full inset-0 z-1 bg-[url('./assets/Bg2.jpg')] bg-no-repeat bg-cover bg-center blur-[5px]"></div>
         <div className="absolute h-full  inset-0 bg-black/70 z-2"></div>
         <div className="flex sticky top-0 gap-10 px-8 py-4 z-3 bg-slate-950/75 rounded-full text-stone-300">
-          <NavLink to={`/`} className="hover:decoration-amber-100">
+          <NavLink
+            to={`/`}
+            className={({ isActive }) =>
+              isActive ? "text-blue-500" : "text-white"
+            }
+          >
             All
           </NavLink>
-          <NavLink to={`webapps`}>Web Apps</NavLink>
-          <NavLink to={`designs`}>Designs</NavLink>
+          <NavLink
+            to={`webapps`}
+            className={({ isActive }) =>
+              isActive ? "text-blue-500" : "text-white"
+            }
+          >
+            Web Apps
+          </NavLink>
+          <NavLink
+            to={`designs`}
+            className={({ isActive }) =>
+              isActive ? "text-blue-500" : "text-white"
+            }
+          >
+            Designs
+          </NavLink>
         </div>
         <div className="z-3">
           <Outlet />
