@@ -30,7 +30,7 @@ export default function Testimonials() {
             className={
               isActive
                 ? "bg-black text-white px-6 py-4 rounded-lg mt-4 cursor-pointer blur-[8px]"
-                : "bg-black text-white px-6 py-4 absolute bottom-0 right-0 rounded-lg mt-4 cursor-pointer"
+                : "bg-black text-white px-6 py-4 absolute bottom-0 right-0 transition duration-300 hover:bg-sky-300/75 hover:text-black bover:border-1 hover:border-black rounded-lg mt-4 cursor-pointer"
             }
             onClick={activate}
           >

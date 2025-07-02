@@ -66,19 +66,22 @@ export default function ProjectCard({
           </p>
           <a
             href={github}
-            className="flex items-center gap-1 text-blue-600 text-sm"
+            className="flex items-center gap-1 text-blue-600 transition-all duration-300 hover:text-blue-400 text-sm"
           >
             <FaGithub /> Github Repository
           </a>
           <div className="flex justify-between mt-[10px]">
             <span
-              className="flex items-center cursor-pointer"
+              className="flex items-center cursor-pointer transitin-all duration-300 hover:text-slate-300"
               onClick={activate}
             >
               <FaCamera className="inline mr-[5px]" />
               Preview
             </span>
-            <a href={link} className="text-green-500/90 flex items-center">
+            <a
+              href={link}
+              className="text-green-500/90 flex items-center transition-all duration-300 hover:text-green-400"
+            >
               <FaCircle className="inline w-[10px] mr-[4px]" />
               Live View
             </a>

@@ -48,7 +48,7 @@ export default function Footer() {
                 placeholder="client@gmail.com"
                 className="border-1 border-sky-200/20 rounded-md h-10 w-[85%] p-2 bg-black/60 lg:w-[500px]"
               />
-              <button className="bg-black/60 border-1 border-sky-200/20 p-2 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]">
+              <button className="bg-black/60 border-1 border-sky-200/20 p-2 transition duration-300 ease hover:bg-sky-200 hover:text-black/90 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]">
                 Submit
               </button>
             </div>
