@@ -106,13 +106,13 @@ function App() {
             Designs
           </NavLink>
         </div>
-        <div className="flex z-3">
+        <div className="flex z-3 pl-6 md:pl-0">
           <Outlet />
         </div>
       </section>
       <section
         id="education"
-        className="pt-8 pl-8 pr-3 pb-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
+        className="pt-8 pl-8 pr-3 pb-8 md:p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
         <h1
           ref={eduRef}
@@ -128,7 +128,7 @@ function App() {
       </section>
       <section
         id="techStack"
-        className="flex flex-col items-center w-100 relative px-8 py-10 items-center"
+        className="flex flex-col items-center md:justify-center md:w-auto w-100 relative p-6 md:px-8 md:py-10 items-center"
       >
         <motion.h1
           ref={techRef}
@@ -144,7 +144,7 @@ function App() {
       </section>
       <section
         id="testimonials"
-        className="relative bg-slate-800/65 p-8 flex flex-col items-center"
+        className="relative bg-slate-800/65 p-6 md:p-8 flex flex-col items-center md:justify-center"
       >
         <motion.h1
           ref={testimonialRef}

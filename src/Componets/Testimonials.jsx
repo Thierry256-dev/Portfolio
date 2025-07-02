@@ -14,12 +14,12 @@ export default function Testimonials() {
 
   return (
     <>
-      <div className="flex flex-col items-center z-5">
+      <div className="flex relative flex-col items-center z-5 overflow-y-auto h-[550px] md:h-auto">
         <div
           className={
             isActive
-              ? "grid grid-cols-1 gap-4 blur-[8px]"
-              : "grid grid-cols-1 gap-4"
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 blur-[8px]"
+              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:items-center md:justify-center  gap-4"
           }
         >
           <TestimonialCard />
@@ -30,7 +30,7 @@ export default function Testimonials() {
             className={
               isActive
                 ? "bg-black text-white px-6 py-4 rounded-lg mt-4 cursor-pointer blur-[8px]"
-                : "bg-black text-white px-6 py-4 rounded-lg mt-4 cursor-pointer"
+                : "bg-black text-white px-6 py-4 absolute bottom-0 right-0 rounded-lg mt-4 cursor-pointer"
             }
             onClick={activate}
           >

@@ -101,7 +101,7 @@ export default function Home() {
           }
         />
       </div>
-      <div className="flex flex-col-reverse md:flex-row items-center gap-5 w-full">
+      <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-around gap-5 w-full">
         <div className="flex flex-col gap-2 items-center">
           <motion.h1
             initial={{ x: -50, opacity: 0, scale: 0.5 }}
@@ -115,7 +115,7 @@ export default function Home() {
               ease: "easeInOut",
               times: [0.4, 0.7, 1],
             }}
-            className="font-bold text-[2.5rem]"
+            className="font-bold text-[2.5rem] lg:text-6xl"
           >
             Hi, I'm Thierry Munderi
           </motion.h1>
@@ -136,7 +136,7 @@ export default function Home() {
                 duration: 1,
                 ease: "easeInOut",
               }}
-              className="font-semibold text-[1.2rem] text-blue-400"
+              className="font-semibold text-[1.2rem] text-blue-400 lg:text-3xl"
             >
               Frontend Developer | UI Engineer | Problem Solver
             </motion.h2>
@@ -147,14 +147,14 @@ export default function Home() {
               whileInView={{
                 x: 0,
               }}
-              className="text-base/6 text-md"
+              className="text-base/6 text-md lg:text-xl lg:w-[800px]"
             >
               I build responsive, performant, and user-focused web applications
               using modern Frontend technologies like JavaScript, React and
               Tailwind CSS. Bringing clean design and efficient code together to
               create intuitive digital experiences
             </motion.p>
-            <a href="">
+            <a href="https://wa.me/256702792026" target="_blank">
               <motion.button
                 initial={{
                   opacity: 0,
@@ -162,7 +162,7 @@ export default function Home() {
                 whileInView={{
                   opacity: 1,
                 }}
-                className="bg-purple-950 hover:bg-blue-700 px-6 py-2 rounded-lg transition text-white font-bold cursor-pointer"
+                className="bg-purple-950 hover:bg-[#25D366] px-6 py-2 rounded-lg transition text-white font-bold cursor-pointer lg:text-xl"
               >
                 Let's Chat <FaWhatsapp className="inline" />
               </motion.button>
@@ -178,15 +178,30 @@ export default function Home() {
               }}
               className="flex gap-4 p-8"
             >
-              <a href="">
+              <motion.a
+                href="https://www.linkedin.com/in/munderi-thierry-56124733b"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.2, color: "#0077B5" }}
+                transition={{ duration: 0.5, ease: "easeIn" }}
+              >
                 <FaLinkedin className="w-7 h-7" />
-              </a>
-              <a href="">
+              </motion.a>
+              <motion.a
+                href="https://instagram.com/t.h.i.e.r.r.y_250"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.2, color: "#E1306C" }}
+                transition={{ duration: 0.5, ease: "easeIn" }}
+              >
                 <FaInstagram className="w-7 h-7" />
-              </a>
-              <a href="">
+              </motion.a>
+              <motion.a
+                href="https://github.com/thierry256-dev"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.2, color: "#181717" }}
+                transition={{ duration: 0.5, ease: "easeIn" }}
+              >
                 <FaGithub className="w-7 h-7" />
-              </a>
+              </motion.a>
             </motion.div>
           </MotionConfig>
         </div>
@@ -201,13 +216,16 @@ export default function Home() {
             scale: 1,
             y: [0, 100, 0],
           }}
+          whileHover={{
+            scale: 1.1,
+          }}
           transition={{
-            duration: 1,
+            duration: 0.8,
             ease: "easeInOut",
             times: [0.3, 0.6, 1],
           }}
           src={profile}
-          className="w-1/3 rounded-full bg-slate-950/80 border-5 border-sky-200/80"
+          className="w-1/3 rounded-full bg-slate-950/80 border-5 border-sky-200/80 lg:w-1/5"
           alt="profile-image"
         />
       </div>

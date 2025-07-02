@@ -4,7 +4,7 @@ import { data } from "./projectsData";
 export default function All() {
   return (
     <>
-      <div className="flex items-center w-100 px-4 overflow-x-auto gap-6 md:grid md:grid-cols-4 lg:grid-cols-4">
+      <div className="flex items-center w-100 p-4 overflow-x-auto gap-6 md:overflow-hidden md:w-auto md:grid md:grid-cols-2 lg:grid-cols-4">
         {data.map((obj, i) => (
           <div key={i}>
             <ProjectCard

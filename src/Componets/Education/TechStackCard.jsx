@@ -50,7 +50,7 @@ export default function TechStackCard({
 
   return (
     <>
-      <div className="flex flex-col ">
+      <div className="flex flex-col md:w-[100%]">
         <motion.div
           ref={titleRef}
           initial={{
@@ -68,7 +68,7 @@ export default function TechStackCard({
           <h3>{language}</h3>
         </motion.div>
         <div className="flex">
-          <div className="flex items-center rounded-full bg-gray-900 w-[300px] h-5">
+          <div className="flex items-center rounded-full bg-gray-900 w-[80%] lg:w-[400px] h-3 md:h-5">
             <motion.div
               ref={progressRef}
               initial={{
@@ -86,7 +86,7 @@ export default function TechStackCard({
                 ease: "easeIn",
               }}
               layout
-              className="h-3 rounded-full"
+              className="h-2 md:h-4 rounded-full"
               style={{ backgroundColor: color, width: progress }}
             ></motion.div>
           </div>

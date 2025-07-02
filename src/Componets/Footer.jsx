@@ -29,10 +29,10 @@ export default function Footer() {
           }}
           className="flex items-center flex-col gap-4 bg-gray-950/75 p-4 rounded-xl m-4 "
         >
-          <h2 className="text-xl font-bold text-orange-400/95 text-center">
+          <h2 className="text-xl font-bold text-orange-400/95 text-center lg:text-3xl">
             Are you looking forward to grow business ?
           </h2>
-          <h3 className="text-md font-noraml text-slate-200">
+          <h3 className="text-md font-noraml text-slate-200 lg:text-xl">
             Get in touch for a proffessional website...
           </h3>
           <div className="flex flex-col gap-4 items-center">
@@ -40,15 +40,15 @@ export default function Footer() {
               name=""
               id=""
               placeholder="Enter your request"
-              className="h-20 block w-[100%] bg-black/60 border-1 border-sky-200/20 rounded-md p-2"
+              className="h-20 block w-[100%] bg-black/60 border-1 border-sky-200/20 rounded-md p-2 lg:w-[600px] lg:h-[200px]"
             ></textarea>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="client@gmail.com"
-                className="border-1 border-sky-200/20 rounded-md h-10 w-[85%] p-2 bg-black/60"
+                className="border-1 border-sky-200/20 rounded-md h-10 w-[85%] p-2 bg-black/60 lg:w-[500px]"
               />
-              <button className="bg-black/60 border-1 border-sky-200/20 p-2 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%]">
+              <button className="bg-black/60 border-1 border-sky-200/20 p-2 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]">
                 Submit
               </button>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         </motion.div>
         <hr className="bg-sky-800" />
         <div className="flex flex-col gap-4 mx-6 my-2">
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-4">
+          <div className="flex flex-col p-4 justify-center md:grid md:grid-cols-2 lg:grid-cols-4 md:p-8 lg:gap-1 gap-4">
             <MotionConfig transition={{ duration: 1, ease: "easeIn" }}>
               <div className="text-slate-400">
                 <motion.h3

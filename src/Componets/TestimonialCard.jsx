@@ -26,7 +26,7 @@ export default function TestimonialCard() {
           duration: 1,
           ease: "easeInOut",
         }}
-        className="bg-sky-200/85 p-4 rounded-xl font-bold flex flex-col gap-4 w-[350px]"
+        className="bg-sky-200/85 p-4 rounded-xl font-bold flex flex-col gap-4 md:w-[350px]"
       >
         <div className="flex gap-4 items-center">
           <div>

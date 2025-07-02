@@ -4,7 +4,7 @@ import { techStack } from "./Education/EducationData";
 export default function TechStack() {
   return (
     <>
-      <div className="flex flex-col md:grid md:grid-cols-2 p-2 gap-4 w-[100%] text-slate-300 font-bold">
+      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-10 p-2 gap-4 w-[100%] md:w-auto text-slate-300 font-bold">
         {techStack.map((obj) => (
           <TechStackCard
             language={obj.language}

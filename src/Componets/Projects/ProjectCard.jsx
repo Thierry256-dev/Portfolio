@@ -43,7 +43,7 @@ export default function ProjectCard({
           duration: 1,
           ease: "easeInOut",
         }}
-        className=" flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px]  border-4 border-slate-400"
+        className=" flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[340px] md:w-[350px]  border-4 border-slate-400"
       >
         <img src={cover} className=" overflow-hidden h-[250px] rounded-lg" />
         <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg g-4">
