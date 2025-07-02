@@ -1,6 +1,6 @@
 import { FaCamera, FaCircle, FaGithub, FaTimes, FaTools } from "react-icons/fa";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 export default function ProjectCard({
   name,
@@ -12,6 +12,8 @@ export default function ProjectCard({
   screenshots,
 }) {
   const [isActive, setIsActive] = useState(false);
+  const cardRef = useRef(null);
+  const isCardInView = useInView(cardRef, { once: true });
 
   function activate() {
     setIsActive(true);
@@ -23,7 +25,26 @@ export default function ProjectCard({
 
   return (
     <>
-      <div className=" flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px]  border-4 border-slate-400">
+      <motion.div
+        ref={cardRef}
+        initial={{
+          opacity: 0.5,
+          scale: 0.5,
+        }}
+        animate={
+          isCardInView
+            ? {
+                opacity: 1,
+                scale: 1,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className=" flex flex-col gap-2 bg-slate-900 p-2 rounded-xl w-[350px]  border-4 border-slate-400"
+      >
         <img src={cover} className=" overflow-hidden h-[250px] rounded-lg" />
         <div className="flex flex-col text-slate-500 bg-gray-950 p-2 rounded-lg g-4">
           <p>
@@ -96,7 +117,7 @@ export default function ProjectCard({
             </motion.div>
           </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
