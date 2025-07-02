@@ -1,9 +1,33 @@
 import { FaUserCircle } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function TestimonialCard() {
+  const testimonialRef = useRef(null);
+  const isTestimonialInView = useInView(testimonialRef, { once: true });
+
   return (
     <>
-      <div className="bg-sky-200/85 p-4 rounded-xl font-bold flex flex-col gap-4 w-[350px]">
+      <motion.div
+        ref={testimonialRef}
+        initial={{
+          scale: 0.5,
+          opacity: 0,
+        }}
+        animate={
+          isTestimonialInView
+            ? {
+                scale: 1,
+                opacity: 1,
+              }
+            : {}
+        }
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+        className="bg-sky-200/85 p-4 rounded-xl font-bold flex flex-col gap-4 w-[350px]"
+      >
         <div className="flex gap-4 items-center">
           <div>
             <FaUserCircle className="w-20 h-20 rounded-full text-black bg-sky-300 border-2 border-white" />
@@ -19,7 +43,7 @@ export default function TestimonialCard() {
             Consectetur Lorem ipsum dolor sit amet consectetur adipisicing
           </p>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

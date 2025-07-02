@@ -31,6 +31,9 @@ function App() {
   const techRef = useRef(null);
   const isTechInView = useInView(techRef, { once: true });
 
+  const testimonialRef = useRef(null);
+  const isTestimonialInView = useInView(testimonialRef, { once: true });
+
   return (
     <>
       <header
@@ -143,9 +146,15 @@ function App() {
         id="testimonials"
         className="relative bg-slate-800/65 p-8 flex flex-col items-center"
       >
-        <h1 className="flex items-center z-3 text-sky-200/85 pb-4 font-bold text-3xl">
+        <motion.h1
+          ref={testimonialRef}
+          initial={{ opacity: 0, y: 200 }}
+          animate={isTestimonialInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex items-center z-3 text-sky-200/85 pb-4 font-bold text-3xl"
+        >
           Testimonials
-        </h1>
+        </motion.h1>
         <div className="absolute h-full inset-0 z-1 bg-[url('./assets/keyboard.jpg')] bg-no-repeat bg-cover bg-center blur-[3px]" />
         <div className="absolute inset-0 h-full z-2 bg-black/80" />
         <Testimonials />
