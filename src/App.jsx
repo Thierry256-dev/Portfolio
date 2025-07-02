@@ -28,6 +28,9 @@ function App() {
   const eduRef = useRef(null);
   const isEduInView = useInView(eduRef, { once: true });
 
+  const techRef = useRef(null);
+  const isTechInView = useInView(techRef, { once: true });
+
   return (
     <>
       <header
@@ -122,12 +125,18 @@ function App() {
       </section>
       <section
         id="techStack"
-        className="flex flex-col relative px-8 py-10 items-center"
+        className="flex flex-col items-center w-100 relative px-8 py-10 items-center"
       >
-        <h1 className="flex items-center text-sky-200/75 pb-4 font-bold text-3xl">
+        <motion.h1
+          ref={techRef}
+          initial={{ opacity: 0 }}
+          animate={isTechInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="flex items-center text-sky-200/75 pb-4 font-bold text-3xl"
+        >
           <FaTools className="inline" />
           Frontend Stack
-        </h1>
+        </motion.h1>
         <TechStack />
       </section>
       <section
