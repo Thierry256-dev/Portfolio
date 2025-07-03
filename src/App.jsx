@@ -1,4 +1,3 @@
-import "./App.css";
 import Home from "./Componets/Home";
 import About from "./Componets/About";
 import Education from "./Componets/Education";
@@ -38,9 +37,12 @@ function App() {
     <>
       <header
         id="home"
-        className="relative flex text-stone-400 px-8 py-2 items-center"
+        className="relative flex h-screen text-stone-400 px-8 py-2 items-center bg-[url('./assets/Bg1.jpg')] bg-center bg-cover bg-no-repeat"
       >
-        <Home />
+        <div className="absolute inset-0 bg-black/70 z-1"></div>
+        <div className="z-2">
+          <Home />
+        </div>
       </header>
       <section
         id="about"

@@ -1,10 +1,28 @@
-import { FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
 import { motion, MotionConfig, useInView } from "framer-motion";
 import { useRef } from "react";
 
 export default function Footer() {
   const emailTabRef = useRef(null);
   const isEmailTabInView = useInView(emailTabRef, { once: true });
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    /*
+    emailjs.sendForm(
+      'service_s8uct2q',
+      'template_759v7dh',
+      e.target,
+      '01tt5pZprlNmyi4_F'
+    ).then((result) => {
+      window.alert('Email sent');
+      console.log('Email sent', result.text);
+    },(error) => {
+      console.error('Error', error.text);
+    });
+*/
+  }
 
   return (
     <>
@@ -35,24 +53,40 @@ export default function Footer() {
           <h3 className="text-md font-noraml text-slate-200 lg:text-xl">
             Get in touch for a proffessional website...
           </h3>
-          <div className="flex flex-col gap-4 items-center">
+          <form
+            onSubmit={sendEmail}
+            className="flex flex-col gap-4 items-center"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              className="border-1 border-sky-200/20 rounded-md h-10 w-[100%] p-2 bg-black/60"
+            />
             <textarea
-              name=""
-              id=""
-              placeholder="Enter your request"
+              name="message"
+              id="message"
+              required
+              placeholder="Enter your message"
               className="h-20 block w-[100%] bg-black/60 border-1 border-sky-200/20 rounded-md p-2 lg:w-[600px] lg:h-[200px]"
             ></textarea>
             <div className="flex gap-2">
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="client@gmail.com"
                 className="border-1 border-sky-200/20 rounded-md h-10 w-[85%] p-2 bg-black/60 lg:w-[500px]"
               />
-              <button className="bg-black/60 border-1 border-sky-200/20 p-2 transition duration-300 ease hover:bg-sky-200 hover:text-black/90 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]">
+              <button
+                type="submit"
+                className="bg-black/60 border-1 border-sky-200/20 p-2 transition duration-300 ease hover:bg-sky-200 hover:text-black/90 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]"
+              >
                 Submit
               </button>
             </div>
-          </div>
+          </form>
         </motion.div>
         <hr className="bg-sky-800" />
         <div className="flex flex-col gap-4 mx-6 my-2">
@@ -102,20 +136,29 @@ export default function Footer() {
                   }}
                   className="text-2xl font-bold text-slate-300"
                 >
-                  Social Media
+                  Profiles
                 </motion.h3>
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="flex items-center gap-2 pl-6"
+                  className="flex items-center gap-2 pl-4"
                 >
-                  <a href="">
+                  <a href="https://github.com/thierry256-dev" target="_blank">
+                    <FaGithub className="w-8 h-8 " />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/munderi-thierry-56124733b"
+                    target="_blank"
+                  >
                     <FaLinkedin className="w-8 h-8 " />
                   </a>
-                  <a href="">
+                  <a href="https://wa.me/256702792026" target="_blank">
                     <FaWhatsapp className="w-8 h-8 " />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://instagram.com/t.h.i.e.r.r.y_250"
+                    target="_blank"
+                  >
                     <FaInstagram className="w-8 h-8 " />
                   </a>
                 </motion.div>
