@@ -87,37 +87,38 @@ export default function ProjectCard({
             </a>
           </div>
           <AnimatePresence>
-            <motion.div
-              initial={{
-                scale: 0,
-              }}
-              whileInView={{
-                scale: 1,
-              }}
-              exit={{
-                scale: 0,
-              }}
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className={
-                isActive
-                  ? "flex flex-col border-2 border-white/50  items-center absolute rounded-lg top-0 left-0 w-[100%] h-[100%] px-2 overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
-                  : "hidden"
-              }
-            >
-              <div className="sticky top-0 flex justify-between p-4 items-center w-[100%] px-4 bg-gray-950">
-                Screenshot
-                <FaTimes
-                  className="text-red-500 cursor-pointer"
-                  onClick={deactivate}
-                />
-              </div>
-              {screenshots.map((shot) => (
-                <img key={shot} src={shot} />
-              ))}
-            </motion.div>
+            {isActive && (
+              <motion.div
+                initial={{
+                  scale: 0,
+                  opacity: 0,
+                }}
+                animate={{
+                  scale: 1,
+                  opacity: 1,
+                }}
+                exit={{
+                  scale: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 0.7,
+                  ease: "easeInOut",
+                }}
+                className="flex flex-col border-2 border-white/50  items-center absolute rounded-lg top-0 left-0 w-[100%] h-[100%] px-2 overflow-y-auto overflow-x-hidden scroll-smooth bg-gray-950 z-5"
+              >
+                <div className="sticky top-0 flex justify-between p-4 items-center w-[100%] px-4 bg-gray-950">
+                  Screenshot
+                  <FaTimes
+                    className="text-red-500 cursor-pointer"
+                    onClick={deactivate}
+                  />
+                </div>
+                {screenshots.map((shot) => (
+                  <img key={shot} src={shot} />
+                ))}
+              </motion.div>
+            )}
           </AnimatePresence>
         </div>
       </motion.div>
