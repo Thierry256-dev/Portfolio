@@ -6,11 +6,13 @@ import App from "./App.jsx";
 import All from "./Componets/Projects/All.jsx";
 import WebApps from "./Componets/Projects/WebApps.jsx";
 import Designs from "./Componets/Projects/Designs.jsx";
+import ErrorPage from "./Componets/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: `/`,
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

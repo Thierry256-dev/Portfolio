@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ErrorBoundary from "./Componets/ErrorBoundary";
 
 function App() {
   const aboutRef = useRef(null);
@@ -159,7 +160,9 @@ function App() {
         </motion.h1>
         <div className="absolute h-full inset-0 z-1 bg-[url('./assets/keyboard.jpg')] bg-no-repeat bg-cover bg-center blur-[3px]" />
         <div className="absolute inset-0 h-full z-2 bg-black/80" />
-        <Testimonials />
+        <ErrorBoundary>
+          <Testimonials />
+        </ErrorBoundary>
       </section>
       <footer id="footer">
         <Footer />

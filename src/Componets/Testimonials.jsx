@@ -1,6 +1,7 @@
 import TestimonialCard from "./TestimonialCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ErrorBoundary from "./ErrorBoundary";
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
@@ -12,14 +13,12 @@ export default function Testimonials() {
     },
   ];
 
-  /*
   useEffect(() => {
     axios
       .get("")
       .then((res) => setTestimonials(res.data))
       .catch((err) => console.error(err));
   }, []);
-  */
 
   return (
     <>
@@ -28,9 +27,9 @@ export default function Testimonials() {
           {test.map((t, i) => (
             <TestimonialCard
               key={i}
-              name={t.name}
-              email={t.email}
-              testimonial={t.testimonial}
+              name={t.Name}
+              email={t.Email}
+              testimonial={t.Testimonial}
             />
           ))}
           <TestimonialCard />
