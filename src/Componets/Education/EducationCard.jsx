@@ -47,10 +47,10 @@ export default function EducationCard({
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="flex items-start gap-4 font-bold text-md text-white/75 border-4 border-white/35 rounded-xl"
+        className="flex items-start gap-4 font-bold text-md text-white/65 border-4 border-white/35 rounded-xl"
       >
         <div className="bg-black/60 p-4 rounded-xl w-full gap-5">
-          <h3 className="text-xl text-sky-500/85">{achievement}</h3>
+          <h3 className="text-xl text-blue-500/95">{achievement}</h3>
           <ul className="ml-4 bg-black rounded-lg p-4">
             <li>
               <span className="text-slate-500">Institution: </span>{" "}

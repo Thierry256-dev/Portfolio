@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiGit } from "react-icons/si";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -24,6 +24,7 @@ export default function TechStackCard({
   const js = <FaJs key={icon} />;
   const rct = <FaReact key={icon} />;
   const tailwind = <SiTailwindcss key={icon} />;
+  const git = <SiGit key={icon} />;
 
   const icons = [
     {
@@ -45,6 +46,10 @@ export default function TechStackCard({
     {
       name: "tailwind",
       element: tailwind,
+    },
+    {
+      name: "git",
+      element: git,
     },
   ];
 
@@ -86,7 +91,7 @@ export default function TechStackCard({
                 ease: "easeIn",
               }}
               layout
-              className="h-2 md:h-4 rounded-full"
+              className="h-2 md:h-3 rounded-full"
               style={{ backgroundColor: color, width: progress }}
             ></motion.div>
           </div>

@@ -24,70 +24,64 @@ export default function Home() {
     <>
       <div className="fixed top-0 left-0 w-screen z-100 flex justify-between items-center p-[20px] bg-slate-950/75 ">
         <h1 className="font-bold text-blue-500 text-[1.2rem]">Portfolio</h1>
-        <AnimatePresence>
-          <motion.nav
-            className={
-              isVisible
-                ? "absolute top-[60px] right-0 bg-slate-950/75 flex flex-col rounded-md p-4 items-center gap-4"
-                : "hidden md:flex gap-4"
-            }
-            initial={{
-              scale: 1,
-              opacity: 1,
-            }}
-            exit={{
-              scale: 0,
-              opacity: 0,
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-            }}
+        <motion.nav
+          className={
+            isVisible
+              ? "absolute top-[60px] right-0 bg-slate-950/75 flex flex-col rounded-md p-4 items-center gap-4"
+              : "hidden md:flex gap-4"
+          }
+          initial={{
+            scale: 1,
+            opacity: 1,
+          }}
+          exit={{
+            scale: 0,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+          }}
+        >
+          <a href="#home" onClick={deactivate} className="hover:text-amber-500">
+            Home
+          </a>
+          <a
+            href="#about"
+            onClick={deactivate}
+            className="hover:text-amber-500"
           >
-            <a
-              href="#home"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              Projects
-            </a>
-            <a
-              href="#education"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              Education
-            </a>
-            <a
-              href="#testimonials"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              Testimonials
-            </a>
-            <a
-              href="#footer"
-              onClick={deactivate}
-              className="hover:text-amber-500"
-            >
-              Contacts
-            </a>
-          </motion.nav>
-        </AnimatePresence>
+            About
+          </a>
+          <a
+            href="#projects"
+            onClick={deactivate}
+            className="hover:text-amber-500"
+          >
+            Projects
+          </a>
+          <a
+            href="#education"
+            onClick={deactivate}
+            className="hover:text-amber-500"
+          >
+            Education
+          </a>
+          <a
+            href="#testimonials"
+            onClick={deactivate}
+            className="hover:text-amber-500"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#footer"
+            onClick={deactivate}
+            className="hover:text-amber-500"
+          >
+            Contacts
+          </a>
+        </motion.nav>
         <FaBars
           onClick={activate}
           className={
@@ -147,7 +141,7 @@ export default function Home() {
               whileInView={{
                 x: 0,
               }}
-              className="text-base/6 text-md lg:text-xl lg:w-[800px]"
+              className="text-base/6 text-md text-white/70 lg:text-xl lg:w-[800px]"
             >
               I build responsive, performant, and user-focused web applications
               using modern Frontend technologies like JavaScript, React and
@@ -162,6 +156,7 @@ export default function Home() {
                 whileInView={{
                   opacity: 1,
                 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
                 className="bg-purple-950 hover:bg-[#25D366] px-6 py-2 rounded-lg transition text-white font-bold cursor-pointer lg:text-xl"
               >
                 Let's Chat <FaWhatsapp className="inline" />
@@ -220,12 +215,12 @@ export default function Home() {
             scale: 1.1,
           }}
           transition={{
-            duration: 0.8,
+            duration: 2,
             ease: "easeInOut",
             times: [0.3, 0.6, 1],
           }}
           src={profile}
-          className="w-1/3 rounded-full bg-slate-950/80 border-5 border-sky-200/80 lg:w-1/5"
+          className="w-1/3 rounded-full bg-black/60 border-5 border-white/50 lg:w-1/3"
           alt="profile-image"
         />
       </div>

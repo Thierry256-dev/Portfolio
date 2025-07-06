@@ -26,10 +26,11 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-gray-800/5 text-white/90 flex flex-col gap-4">
+      <div className="bg-black/60 text-white/80 flex flex-col gap-4">
         <motion.div
           ref={emailTabRef}
           initial={{
+            opacity: 0,
             rotateX: "-180deg",
             rotateY: "-180deg",
           }}
@@ -38,17 +39,18 @@ export default function Footer() {
               ? {
                   rotateX: "0deg",
                   rotateY: "0deg",
+                  opacity: 1,
                 }
               : {}
           }
           transition={{
-            duration: 1,
+            duration: 2,
             ease: "easeInOut",
           }}
           className="flex items-center flex-col gap-4 bg-gray-950/75 p-4 rounded-xl m-4 "
         >
           <h2 className="text-xl font-bold text-orange-400/95 text-center lg:text-3xl">
-            Are you looking forward to grow business ?
+            Are you looking forward to grow your business ?
           </h2>
           <h3 className="text-md font-noraml text-slate-200 lg:text-xl">
             Get in touch for a proffessional website...

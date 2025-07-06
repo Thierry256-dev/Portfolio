@@ -15,16 +15,14 @@ export default function About() {
       <div className="flex justify-center items-center flex-col lg:w-[60%] lg:text-lg/7 lg:justify-between gap-6 rounded-lg text-md">
         <MotionConfig
           transition={{
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-            duration: 1,
+            duration: 2,
+            ease: "easeInOut",
           }}
         >
           <motion.p
             ref={ref1}
             initial={{
-              x: -100,
+              x: -200,
               opacity: 0,
             }}
             animate={
@@ -47,7 +45,7 @@ export default function About() {
           <motion.p
             ref={ref2}
             initial={{
-              x: 100,
+              x: 200,
               opacity: 0,
             }}
             animate={
@@ -70,7 +68,7 @@ export default function About() {
           <motion.p
             ref={ref3}
             initial={{
-              x: -100,
+              x: -200,
               opacity: 0,
             }}
             animate={

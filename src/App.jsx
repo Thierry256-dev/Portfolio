@@ -40,8 +40,8 @@ function App() {
         id="home"
         className="relative flex h-screen text-stone-400 px-8 py-2 items-center bg-[url('./assets/Bg1.jpg')] bg-center bg-cover bg-no-repeat"
       >
-        <div className="absolute inset-0 bg-black/70 z-1"></div>
-        <div className="z-2">
+        <div className="absolute inset-0 bg-black/80 z-1"></div>
+        <div className="z-1000">
           <Home />
         </div>
       </header>

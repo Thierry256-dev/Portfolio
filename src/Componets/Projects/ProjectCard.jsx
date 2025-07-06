@@ -28,7 +28,7 @@ export default function ProjectCard({
       <motion.div
         ref={cardRef}
         initial={{
-          opacity: 0.5,
+          opacity: 0,
           scale: 0.5,
         }}
         animate={

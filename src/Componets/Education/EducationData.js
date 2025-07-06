@@ -82,4 +82,12 @@ export const techStack = [
     color: "#38BDF8",
     comment: "Comfortable with most features",
   },
+  {
+    id: "6",
+    language: "Git",
+    progress: "85%",
+    icon: "git",
+    color: "#ac2810",
+    comment: "Actively practicing",
+  },
 ];

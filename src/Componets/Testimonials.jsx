@@ -36,7 +36,7 @@ export default function Testimonials() {
         </div>
         <div>
           <a href="https://forms.gle/bYSXNxnjdXGJkt1s6" target="_blank">
-            <button className="bg-black text-white px-6 py-4 sticky bottom-0 right-0 transition duration-300 hover:bg-sky-300/75 hover:text-black bover:border-1 hover:border-black rounded-lg mt-4 cursor-pointer">
+            <button className="bg-black/90 text-white px-6 py-4 sticky bottom-0 right-0 transition duration-300 hover:bg-slate-500 hover:text-black bover:border-1 hover:border-black rounded-lg mt-4 cursor-pointer">
               Add Yours
             </button>
           </a>
