@@ -109,7 +109,7 @@ export default function Home() {
               ease: "easeInOut",
               times: [0.4, 0.7, 1],
             }}
-            className="font-bold text-[2.5rem] lg:text-6xl"
+            className="font-bold text-[2.5rem] lg:text-6xl text-center"
           >
             Hi, I'm Thierry Munderi
           </motion.h1>

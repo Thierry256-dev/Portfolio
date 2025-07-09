@@ -73,7 +73,7 @@ export default function TechStackCard({
           <h3>{language}</h3>
         </motion.div>
         <div className="flex">
-          <div className="flex items-center rounded-full bg-gray-900 w-[80%] lg:w-[400px] h-3 md:h-5">
+          <div className="flex items-center rounded-full bg-gray-900 w-[90%] md:w-[80%] lg:w-[400px] h-3 md:h-5">
             <motion.div
               ref={progressRef}
               initial={{
