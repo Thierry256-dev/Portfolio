@@ -1,27 +1,35 @@
 import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
 import { motion, MotionConfig, useInView } from "framer-motion";
 import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Footer() {
   const emailTabRef = useRef(null);
   const isEmailTabInView = useInView(emailTabRef, { once: true });
 
+  const form = useRef();
+
   function sendEmail(e) {
     e.preventDefault();
 
-    /*
-    emailjs.sendForm(
-      'service_s8uct2q',
-      'template_759v7dh',
-      e.target,
-      '01tt5pZprlNmyi4_F'
-    ).then((result) => {
-      window.alert('Email sent');
-      console.log('Email sent', result.text);
-    },(error) => {
-      console.error('Error', error.text);
-    });
-*/
+    emailjs
+      .sendForm(
+        "service_gp45qck",
+        "template_759v7dh",
+        e.target,
+        "01tt5pZprlNmyi4_F"
+      )
+      .then(
+        (result) => {
+          window.alert("Email sent");
+          console.log("Email sent", result.text);
+          form.current.reset();
+        },
+        (error) => {
+          console.error("Error", error.text);
+          alert("Failed to send message. Try again");
+        }
+      );
   }
 
   return (
@@ -56,6 +64,7 @@ export default function Footer() {
             Get in touch for a proffessional website...
           </h3>
           <form
+            ref={form}
             onSubmit={sendEmail}
             className="flex flex-col gap-4 items-center"
           >

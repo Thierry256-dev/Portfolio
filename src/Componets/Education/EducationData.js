@@ -87,7 +87,7 @@ export const techStack = [
     language: "Git",
     progress: "85%",
     icon: "git",
-    color: "#ac2810",
+    color: "#f05032",
     comment: "Actively practicing",
   },
 ];
