@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-col lg:w-[60%] lg:text-lg/7 lg:justify-between gap-6 rounded-lg text-md">
+      <div className="flex overflow-x-hidden justify-center items-center flex-col lg:w-[60%] lg:text-lg/7 lg:justify-between gap-6 rounded-lg text-md">
         <MotionConfig
           transition={{
             duration: 2,

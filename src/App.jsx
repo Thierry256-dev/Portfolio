@@ -38,7 +38,7 @@ function App() {
     <>
       <header
         id="home"
-        className="relative flex h-screen text-stone-400 px-8 py-2 items-center bg-[url('./assets/Bg1.jpg')] bg-center bg-cover bg-no-repeat"
+        className="relative overflow-x-hidden flex h-screen text-stone-400 px-8 py-2 items-center bg-[url('./assets/Bg1.jpg')] bg-center bg-cover bg-no-repeat"
       >
         <div className="absolute inset-0 bg-black/80 z-1"></div>
         <div className="z-1000">
@@ -47,7 +47,7 @@ function App() {
       </header>
       <section
         id="about"
-        className="flex items-center flex-col gap-4 h-auto bg-gray-950 p-8"
+        className="flex overflow-x-hidden items-center flex-col gap-4 h-auto bg-gray-950 p-8"
       >
         <motion.h1
           ref={aboutRef}
@@ -63,7 +63,7 @@ function App() {
       </section>
       <section
         id="projects"
-        className="relative flex gap-5 pb-8 flex-col items-center h-auto font-bold"
+        className="relative overflow-x-hidden flex gap-5 pb-8 flex-col items-center h-auto font-bold"
       >
         <h1
           ref={projectRef}
@@ -109,13 +109,13 @@ function App() {
             Designs
           </NavLink>
         </div>
-        <div className="flex z-3 pl-6 md:pl-0">
+        <div className="flex z-3 max-w-screen">
           <Outlet />
         </div>
       </section>
       <section
         id="education"
-        className="pt-8 pl-8 pr-3 pb-8 md:p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
+        className="overflow-x-hidden pt-8 pl-8 pr-3 pb-8 md:p-8 bg-gray-950 h-auto flex flex-col justify-center items-center"
       >
         <h1
           ref={eduRef}
@@ -131,7 +131,7 @@ function App() {
       </section>
       <section
         id="techStack"
-        className="flex flex-col items-center md:justify-center md:w-auto w-100 relative p-6 md:px-8 md:py-10 items-center"
+        className="overflow-x-hidden flex flex-col items-center md:justify-center md:w-auto  relative p-6 md:px-8 md:py-10 items-center"
       >
         <motion.h1
           ref={techRef}
@@ -147,7 +147,7 @@ function App() {
       </section>
       <section
         id="testimonials"
-        className="relative bg-slate-800/65 p-6 md:p-8 flex flex-col items-center md:justify-center"
+        className="overflow-x-hidden relative bg-slate-800/65 p-6 md:p-8 flex flex-col items-center md:justify-center"
       >
         <motion.h1
           ref={testimonialRef}

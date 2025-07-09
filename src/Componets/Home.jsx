@@ -95,7 +95,7 @@ export default function Home() {
           }
         />
       </div>
-      <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-around gap-5 w-full">
+      <div className="overflow-x-hidden flex flex-col-reverse lg:flex-row items-center lg:justify-around gap-5 w-full">
         <div className="flex flex-col gap-2 items-center">
           <motion.h1
             initial={{ x: -50, opacity: 0, scale: 0.5 }}
@@ -165,13 +165,11 @@ export default function Home() {
             <motion.div
               initial={{
                 opacity: 0,
-                y: 100,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
-              className="flex gap-4 p-8"
+              className="relative overflow-hidden z-20 flex gap-4 p-8"
             >
               <motion.a
                 href="https://www.linkedin.com/in/munderi-thierry-56124733b"

@@ -5,34 +5,31 @@ import ErrorBoundary from "./ErrorBoundary";
 
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
-  const test = [
-    {
-      name: "Client1",
-      email: "client1@gmail.com",
-      testimonial: "Lorem is good",
-    },
-  ];
 
   useEffect(() => {
     axios
-      .get("")
+      .get(
+        "https://script.google.com/macros/s/AKfycbzLH4dAVsvQj5tsKSEvQnmIzV10KXVqrBelBUVbhw4m2SINBUlpNgb0GF1pbW_oendu9g/exec"
+      )
       .then((res) => setTestimonials(res.data))
       .catch((err) => console.error(err));
   }, []);
 
   return (
     <>
-      <div className="flex relative flex-col items-center z-5 overflow-y-auto h-[550px] md:h-auto">
+      <div className="flex w-full relative flex-col items-center z-5 overflow-y-auto max-h-[550px] md:h-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:items-center md:justify-center  gap-4">
-          {test.map((t, i) => (
-            <TestimonialCard
-              key={i}
-              name={t.Name}
-              email={t.Email}
-              testimonial={t.Testimonial}
-            />
-          ))}
-          <TestimonialCard />
+          {testimonials
+            .slice()
+            .reverse()
+            .map((t, i) => (
+              <TestimonialCard
+                key={i}
+                name={t.Name}
+                email={t.Email}
+                testimonial={t.Testimonial}
+              />
+            ))}
         </div>
         <div>
           <a href="https://forms.gle/bYSXNxnjdXGJkt1s6" target="_blank">

@@ -92,7 +92,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-black/60 border-1 border-sky-200/20 p-2 transition duration-300 ease hover:bg-sky-200 hover:text-black/90 rounded-sm text-sky-200 font-bold cursor-pointer w-[25%] lg:w-[80px]"
+                className="bg-black/60 border-1 border-sky-200/20 p-2 transition duration-300 ease hover:bg-sky-200 hover:text-black/90 rounded-sm text-sky-200 font-bold cursor-pointer"
               >
                 Submit
               </button>
