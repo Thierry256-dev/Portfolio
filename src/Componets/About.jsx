@@ -33,7 +33,7 @@ export default function About() {
                   }
                 : {}
             }
-            className="shadow-lg z-5 p-6 rounded-lg text-sky-200 bg-black/80"
+            className="shadow-lg z-5 p-6 rounded-lg text-sky-200 bg-black/80 text-justify"
           >
             I'm Thierry Munderi, a <strong>frontend developer</strong> with a
             strong passion for crafting responsive, accessible, and
@@ -56,7 +56,7 @@ export default function About() {
                   }
                 : {}
             }
-            className="shadow-lg p-6 rounded-lg text-sky-200 bg-black/80"
+            className="shadow-lg p-6 rounded-lg text-sky-200 bg-black/80 text-justify"
           >
             My workflow combines technical precision with creative
             problem-solving--whether it's building reusable components,{" "}
@@ -79,7 +79,7 @@ export default function About() {
                   }
                 : {}
             }
-            className="shadow-lg p-6 rounded-lg text-sky-200 bg-black/80"
+            className="shadow-lg p-6 rounded-lg text-sky-200 bg-black/80 text-justify"
           >
             I love turning ideas into functional, beautiful interfaces-- and I'm
             always looking for new challenges that push the boundaries that the

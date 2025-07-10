@@ -141,7 +141,7 @@ export default function Home() {
               whileInView={{
                 x: 0,
               }}
-              className="text-base/6 text-md text-white/70 lg:text-xl lg:w-[800px]"
+              className="text-base/6 text-md text-white/70 lg:text-xl lg:w-[800px] text-justify"
             >
               I build responsive, performant, and user-focused web applications
               using modern Frontend technologies like JavaScript, React and

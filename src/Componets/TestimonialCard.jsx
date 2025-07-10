@@ -38,7 +38,7 @@ export default function TestimonialCard({ name, email, testimonial }) {
           </div>
         </div>
         <div>
-          <p className="bg-slate-900/60 p-2 rounded-md font-normal shadow-lg">
+          <p className="bg-slate-900/60 p-2 rounded-md font-normal shadow-lg text-justify">
             {testimonial ||
               "Lorem ipsum dolor, sit amet consectetur adipisicin elit. Consectetur Lorem ipsum dolor sit amet consectetur adipisicing"}
           </p>
